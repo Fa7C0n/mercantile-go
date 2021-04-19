@@ -26,7 +26,8 @@ func (t *Tile) TopLeft() (*LongLat, error) {
 	return NewLongLat(longDeg, latDeg)
 }
 
-func (t *Tile) Bounds() (*LongLatBbox, error) {
+// BoundsLatLong returns the bounding box of the Tile in LatLong
+func (t *Tile) BoundsLatLong() (*LongLatBbox, error) {
 	Z2 := math.Pow(2, float64(t.z))
 	tlLongDeg := float64(t.x)/Z2*360.0 - 180.0
 	tlLatRad := math.Atan(math.Sinh(math.Pi * (1 - 2*float64(t.y)/Z2)))

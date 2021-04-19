@@ -29,10 +29,12 @@ func ValidateLats(lats ...float64) error {
 	return nil
 }
 
+// TODO: add proper validation for mercator limits.
 func ValidateEastings(eastings ...float64) error {
 	return nil
 }
 
+// TODO: add proper validation for mercator limits.
 func ValidateNorthings(northings ...float64) error {
 	return nil
 }
